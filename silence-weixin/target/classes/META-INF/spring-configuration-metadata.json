@@ -1,0 +1,23 @@
+{
+  "groups": [
+    {
+      "name": "wx.mp",
+      "type": "com.silence.weixin.config.WxMpProperties",
+      "sourceType": "com.silence.weixin.config.WxMpProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "wx.mp.a-e-skey",
+      "type": "java.lang.String",
+      "sourceType": "com.silence.weixin.config.WxMpProperties",
+      "defaultValue": "silence"
+    },
+    {
+      "name": "wx.mp.configs",
+      "type": "java.util.List<com.silence.weixin.config.WxMpProperties.MpConfig>",
+      "sourceType": "com.silence.weixin.config.WxMpProperties"
+    }
+  ],
+  "hints": []
+}

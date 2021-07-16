@@ -1,0 +1,9 @@
+com\silence\tencent\config\TencentConfiguration.class
+com\silence\tencent\config\TencentProperties.class
+com\silence\tencent\service\impl\TencentAnalysisTaskImpl.class
+com\silence\tencent\service\OwnthinkRobotAnswer.class
+com\silence\tencent\service\impl\OwnthinkRobotAnswerImpl.class
+com\silence\tencent\service\TencentAnalysisTask.class
+META-INF\spring-configuration-metadata.json
+com\silence\tencent\test\SentenceRecognition.class
+com\silence\tencent\doman\SentenceRecognitionModel.class

@@ -1,0 +1,32 @@
+{
+  "groups": [
+    {
+      "name": "tencent.config",
+      "type": "com.silence.tencent.config.TencentProperties",
+      "sourceType": "com.silence.tencent.config.TencentProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "tencent.config.realm-name",
+      "type": "java.lang.String",
+      "sourceType": "com.silence.tencent.config.TencentProperties"
+    },
+    {
+      "name": "tencent.config.secret-id",
+      "type": "java.lang.String",
+      "sourceType": "com.silence.tencent.config.TencentProperties"
+    },
+    {
+      "name": "tencent.config.secret-key",
+      "type": "java.lang.String",
+      "sourceType": "com.silence.tencent.config.TencentProperties"
+    },
+    {
+      "name": "tencent.config.token",
+      "type": "java.lang.String",
+      "sourceType": "com.silence.tencent.config.TencentProperties"
+    }
+  ],
+  "hints": []
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/silence.iml" filepath="$PROJECT_DIR$/.idea/silence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/silence-admin/silence-admin.iml" filepath="$PROJECT_DIR$/silence-admin/silence-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/silence-common/silence-common.iml" filepath="$PROJECT_DIR$/silence-common/silence-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/silence-framework/silence-framework.iml" filepath="$PROJECT_DIR$/silence-framework/silence-framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/silence-generator/silence-generator.iml" filepath="$PROJECT_DIR$/silence-generator/silence-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/silence-quartz/silence-quartz.iml" filepath="$PROJECT_DIR$/silence-quartz/silence-quartz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/silence-system/silence-system.iml" filepath="$PROJECT_DIR$/silence-system/silence-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/silence-tencent/silence-tencent.iml" filepath="$PROJECT_DIR$/silence-tencent/silence-tencent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/silence-weixin/silence-weixin.iml" filepath="$PROJECT_DIR$/silence-weixin/silence-weixin.iml" />
+    </modules>
+  </component>
+</project>

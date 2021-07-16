@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="silence-quartz" />
+        <module name="silence-generator" />
+        <module name="silence-framework" />
+        <module name="silence-tencent" />
+        <module name="silence-system" />
+        <module name="silence-common" />
+        <module name="silence-admin" />
+        <module name="silence-weixin" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="silence" target="1.8" />
+      <module name="silence-admin" target="1.8" />
+      <module name="silence-common" target="1.8" />
+      <module name="silence-framework" target="1.8" />
+      <module name="silence-generator" target="1.8" />
+      <module name="silence-quartz" target="1.8" />
+      <module name="silence-system" target="1.8" />
+      <module name="silence-tencent" target="1.8" />
+      <module name="silence-weixin" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

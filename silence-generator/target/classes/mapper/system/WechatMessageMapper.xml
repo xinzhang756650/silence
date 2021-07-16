@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.silence.system.mapper.WechatMessageMapper">
+    
+    <resultMap type="WechatMessage" id="WechatMessageResult">
+        <result property="msgId"    column="msg_id"    />
+        <result property="openId"    column="open_id"    />
+        <result property="content"    column="content"    />
+        <result property="toUserName"    column="to_user_name"    />
+        <result property="fromUserName"    column="from_user_name"    />
+        <result property="msgType"    column="msg_type"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="remark"    column="remark"    />
+    </resultMap>
+	
+	<sql id="selectWechatMessageVo">
+        select msg_id, open_id, content, to_user_name, from_user_name, msg_type, create_by, create_time, update_by, update_time, remark from wechat_message
+    </sql>
+	
+    <select id="selectWechatMessageList" parameterType="WechatMessage" resultMap="WechatMessageResult">
+        <include refid="selectWechatMessageVo"/>
+        <where>  
+            <if test="msgId != null "> and msg_id = #{msgId}</if>
+             <if test="openId != null  and openId != '' "> and open_id = #{openId}</if>
+             <if test="content != null  and content != '' "> and content = #{content}</if>
+             <if test="toUserName != null  and toUserName != '' "> and to_user_name = #{toUserName}</if>
+             <if test="fromUserName != null  and fromUserName != '' "> and from_user_name = #{fromUserName}</if>
+             <if test="msgType != null  and msgType != '' "> and msg_type = #{msgType}</if>
+             <if test="createBy != null  and createBy != '' "> and create_by = #{createBy}</if>
+             <if test="createTime != null "> and create_time = #{createTime}</if>
+             <if test="updateBy != null  and updateBy != '' "> and update_by = #{updateBy}</if>
+             <if test="updateTime != null "> and update_time = #{updateTime}</if>
+             <if test="remark != null  and remark != '' "> and remark = #{remark}</if>
+         </where>
+    </select>
+    
+    <select id="selectWechatMessageById" parameterType="Integer" resultMap="WechatMessageResult">
+        <include refid="selectWechatMessageVo"/>
+        where msg_id = #{msgId}
+    </select>
+        
+    <insert id="insertWechatMessage" parameterType="WechatMessage" useGeneratedKeys="true" keyProperty="msgId">
+        insert into wechat_message
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="openId != null  and openId != ''  ">open_id,</if>
+			<if test="content != null  and content != ''  ">content,</if>
+			<if test="toUserName != null  and toUserName != ''  ">to_user_name,</if>
+			<if test="fromUserName != null  and fromUserName != ''  ">from_user_name,</if>
+			<if test="msgType != null  and msgType != ''  ">msg_type,</if>
+			<if test="createBy != null  and createBy != ''  ">create_by,</if>
+			<if test="createTime != null  ">create_time,</if>
+			<if test="updateBy != null  and updateBy != ''  ">update_by,</if>
+			<if test="updateTime != null  ">update_time,</if>
+			<if test="remark != null  and remark != ''  ">remark,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="openId != null  and openId != ''  ">#{openId},</if>
+			<if test="content != null  and content != ''  ">#{content},</if>
+			<if test="toUserName != null  and toUserName != ''  ">#{toUserName},</if>
+			<if test="fromUserName != null  and fromUserName != ''  ">#{fromUserName},</if>
+			<if test="msgType != null  and msgType != ''  ">#{msgType},</if>
+			<if test="createBy != null  and createBy != ''  ">#{createBy},</if>
+			<if test="createTime != null  ">#{createTime},</if>
+			<if test="updateBy != null  and updateBy != ''  ">#{updateBy},</if>
+			<if test="updateTime != null  ">#{updateTime},</if>
+			<if test="remark != null  and remark != ''  ">#{remark},</if>
+         </trim>
+    </insert>
+	 
+    <update id="updateWechatMessage" parameterType="WechatMessage">
+        update wechat_message
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="openId != null  and openId != ''  ">open_id = #{openId},</if>
+            <if test="content != null  and content != ''  ">content = #{content},</if>
+            <if test="toUserName != null  and toUserName != ''  ">to_user_name = #{toUserName},</if>
+            <if test="fromUserName != null  and fromUserName != ''  ">from_user_name = #{fromUserName},</if>
+            <if test="msgType != null  and msgType != ''  ">msg_type = #{msgType},</if>
+            <if test="createBy != null  and createBy != ''  ">create_by = #{createBy},</if>
+            <if test="createTime != null  ">create_time = #{createTime},</if>
+            <if test="updateBy != null  and updateBy != ''  ">update_by = #{updateBy},</if>
+            <if test="updateTime != null  ">update_time = #{updateTime},</if>
+            <if test="remark != null  and remark != ''  ">remark = #{remark},</if>
+        </trim>
+        where msg_id = #{msgId}
+    </update>
+
+	<delete id="deleteWechatMessageById" parameterType="Integer">
+        delete from wechat_message where msg_id = #{msgId}
+    </delete>
+	
+    <delete id="deleteWechatMessageByIds" parameterType="String">
+        delete from wechat_message where msg_id in 
+        <foreach item="msgId" collection="array" open="(" separator="," close=")">
+            #{msgId}
+        </foreach>
+    </delete>
+    
+</mapper>
